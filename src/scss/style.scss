@@ -110,7 +110,7 @@ body {
 .main-slider {
     position: relative;
 
-    .swiper-slide{
+    .swiper-slide {
         align-items: stretch;
         // border: solid green;
         height: 484px;
@@ -214,7 +214,7 @@ body {
         margin: 0 12px;
         animation: rotate 5s infinite linear;
         user-select: none;
-        
+
     }
 }
 
@@ -243,3 +243,5 @@ body {
 @import '../../node_modules/swiper/modules/navigation/navigation';
 @import '../../node_modules/swiper/modules/pagination/pagination';
 @import '../../node_modules/swiper/modules/scrollbar/scrollbar';
+
+/*iugh*/
