@@ -1,0 +1,93 @@
+// Кнопки тег btn =============
+.btn {
+    position: relative;
+    display: inline-block;
+    &:before,
+    &:after {
+        position: absolute;
+        left: 0;
+        height: 3px;
+        width: 100%;
+        content: "";
+    }
+
+    &:before {
+        top: 0;
+        background-color: #c3a774;
+    }
+
+    &:after {
+        bottom: 0;
+        background-color: #8d652e;
+    }
+
+    &__body {
+
+    
+   
+
+
+        &:before,
+        &:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            height: 100%;
+            width: 3px;
+            background-image: linear-gradient(to top, #8f6630, #c3a774);
+        }
+
+        &:before {
+            left: 0;
+        }
+
+        &:after {
+            right: 0;
+        }
+
+        span {
+            min-height: 50px;
+            color: #fff;
+            font-size: 15px;
+            font-family: 'pfdintextcondpro';
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0 50px;
+            position: relative;
+
+            &:after {
+                content: "";
+                height: 50%;
+                transition: all 0.8s ease 0s;
+                opacity: 0.06;
+                background-image: linear-gradient(to top, #bb9c66 0%, rgba(187, 56, 182, 0) 100%);
+                top: 0;
+                left: 0;
+                position: absolute;
+                width: 100%;
+            }
+        }
+    }
+
+    @media (min-width: 992px) {
+        &:hover {
+            .btn__body span{
+                &:after{
+                    opacity: 0.3;
+                    height: 100%;
+                    // border: solid green;
+                }
+            }
+        }
+    }
+
+    &._fw {
+        width: 100%;
+    }
+}
+
+
+// ============================
