@@ -41,7 +41,7 @@
 .menu {
 
 
-    padding: 0 0 0 30px/950px * 100%;
+    padding: 0 0 0 calc(30px/950px * 100%);
     flex: 1 1 auto;
     // border: #fff solid;
 
@@ -253,8 +253,9 @@
         background-color: #1c242a;
         padding: 20px;
         min-width: 176px;
+    
 
-        // border: #fff solid;
+        // border: green solid 10px;
         li {
             margin: 0 0 8px 0;
 
@@ -271,6 +272,7 @@
             top: 78px;
             opacity: 1;
             visibility: visible;
+            // border: solid 20px;
         }
     }
 

@@ -1,35 +1,31 @@
-// МИКСИНЫ =============
+// === МИКСИНЫ ============= >>
 @import "mixins.scss";
-// ============== МИКСИНЫ
+// << ============== МИКСИНЫ ===
 
-// !=== ШРИФТЫ ================
+// !=== ШРИФТЫ ================ >>
 
-// Подключаем шрифты===========
-// 
-@import url("https://fonts.googleapis.com/css?family=PT+Sans:regular,italic,700&subset=cyrillic-ext");
+// === Подключаем шрифты =========== >>
+@import url("https://fonts.googleapis.com/css?family=PT+Sans:regular,italic,700&display=swap&subset=cyrillic-ext");
+@import url("https://fonts.googleapis.com/css?family=PT+Sans+Narrow:regular&display=swap&subset=cyrillic-ext");
 @import "fonts.scss";
-// ===========Подключаем шрифты
+// << =========== Подключаем шрифты ===
 
-// 
-// 
-// 
-
-// Шрифты по умолчанию============
+// === Шрифты по умолчанию ============ >>
 $fontfamily: "PT Sans";
-// =============Шрифты по умолчанию
+// << ============= Шрифты по умолчанию ===
 
-// !================== ШРИФТЫ ====
+// ! << ================== ШРИФТЫ ====
 
-// ПЕРЕМЕННЫЕ ===============
+// === ПЕРЕМЕННЫЕ =============== >>
 $minwidth: 320px;
 $mw: 970;
 $md1: $mw + 12;
 $md2: 991.98;
 $md3: 767.98;
 $md4: 479.98;
-// ================ ПЕРЕМЕННЫЕ
+// << ================ ПЕРЕМЕННЫЕ ===
 
-// ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ ==========
+// === ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ ========== >>
 @import "null.scss";
 
 body {
@@ -47,9 +43,9 @@ body {
     }
 }
 
-// =========== ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ
+// << =========== ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ ===
 
-// ОБОЛОЧКА =====================
+// === ОБОЛОЧКА ===================== >>
 .wrapper {
     width: 100%;
     min-height: 100%;
@@ -61,13 +57,14 @@ body {
     // &._loaded {}
 }
 
-// ================== ОБОЛОЧКА
+// << ================== ОБОЛОЧКА ===
 
-// ОСНОВНАЯ СЕТКА =================
+// === ОСНОВНАЯ СЕТКА ================= >>
 ._container {
     max-width: $mw + px;
     margin: 0 auto;
     padding: 0 10px;
+
     // border: dashed red 1px;
 
     // @media (max-width: $md1 + px) {
@@ -84,22 +81,29 @@ body {
     // }
 }
 
-// ================ ОСНОВНАЯ СЕТКА
+// << ================ ОСНОВНАЯ СЕТКА ===
 
-// ПОДКЮЧЕНИЕ ФАЙЛОВ UI СТИЛЕЙ, ФОРМ И ГОТОВЫХ КЛАССОВ =========
+// === ОДКЮЧЕНИЕ ФАЙЛОВ UI СТИЛЕЙ, ФОРМ И ГОТОВЫХ КЛАССОВ ========= >>
 @import "forms.scss";
 @import "ui.scss";
-// @import '../../node_modules/swiper/swiper';
-// ========= ПОДКЮЧЕНИЕ ФАЙЛОВ UI СТИЛЕЙ, ФОРМ И ГОТОВЫХ КЛАССОВ
+// << ========= ПОДКЮЧЕНИЕ ФАЙЛОВ UI СТИЛЕЙ, ФОРМ И ГОТОВЫХ КЛАССОВ ===
 
-// ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙСТРАНИЦ И ЭЛЕМЕНТОВ =============
+// === ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙСТРАНИЦ И ЭЛЕМЕНТОВ ============= >>
 @import "popup.scss";
 @import "header.scss";
 @import "footer.scss";
 @import "home.scss";
-// ============ ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙСТРАНИЦ И ЭЛЕМЕНТОВ
+// << ============ ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙСТРАНИЦ И ЭЛЕМЕНТОВ ===
 
-// ОСНОВНОЙ БЛОК =======================
+// ============== ПОДКЛЮЧЕНИЕ SWIPER === >>
+@import '../../node_modules/swiper/swiper';
+@import '../../node_modules/swiper/modules/navigation/navigation';
+// @import '../../node_modules/swiper/modules/pagination/pagination';
+// @import '../../node_modules/swiper/modules/scrollbar/scrollbar';
+// << === ПОДКЛЮЧЕНИЕ SWIPER ===============
+
+
+// === ОСНОВНОЙ БЛОК ======================= >>
 .page {
     flex: 1 1 auto;
     // border: solid blue 3px;
@@ -111,9 +115,8 @@ body {
     position: relative;
 
     .swiper-slide {
-        align-items: stretch;
-        // border: solid green;
-        height: 484px;
+        height: auto;
+
     }
 
     &__body {}
@@ -226,22 +229,249 @@ body {
     }
 }
 
-// ======================= ОСНОВНОЙ БЛОК
+//  ====================================
+.lots {
+    padding: 85px 0 63px 0;
+
+    &__container {
+        overflow: hidden;
+    }
+
+    &__header {
+        margin: 0 0 40px 0;
+    }
+
+    &__slider {}
+}
+
+.slider-lots {
+
+    &__body {
+
+        margin: 0 -50px 50px;
+
+        .swiper-slide {
+            height: auto;
+        }
+
+        @media (max-width: 975px) {
+            margin: 0 -15px 50px;
+        }
+
+    }
+
+    &__slider {
+        padding: 0 50px;
+
+        @media (max-width: 975px) {
+            padding: 0 15px;
+        }
+    }
+
+    &__control {}
+}
+
+.control-slider-lots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__arrow {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+
+        span {
+            background: url('@img/lots/sl-arrow.png') left no-repeat;
+            flex: 0 0 108px;
+            overflow: hidden;
+            width: 108px;
+            height: 35px;
+
+            @media (max-width: 450px) {
+                flex: 0 0 50px;
+            }
+        }
+
+        &:after {
+            content: '';
+            margin: 0 5px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            border: 1px solid #BB9C66;
+        }
+
+        &:last-child {
+            flex-direction: row-reverse;
+
+            span {
+                transform: rotate(-180deg);
+
+            }
 
 
-// .swiper {
-//     width: 600px;
-//     height: 200px;
+        }
+    }
 
-//   }
-// .sss {
-//     width: 100%;
-// }
+    &__link {
+        background: url('@img/lots/circle.png') 0 0 no-repeat;
+        flex: 0 0 100px;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 21px;
+        color: #000;
+        font-weight: 500;
+        text-transform: uppercase;
+        font-family: 'pfdintextcondpro';
+        margin: 0 20px;
+    }
+}
+
+// ===========================================================================
+.categories {
+
+    &__container {
+        overflow: hidden;
+        position: relative;
+        &:after{
+            content: "";
+            position: absolute;
+            bottom: 0;
+            height: 45px;
+            background-color: #fff;
+            width: 100%;
+        }
+    }
+
+    &__row {
+        display: flex;
+        // justify-content: center;
+        position: relative;
+        flex-wrap: wrap;
+        margin: 0 -50px;
+        padding: 33px 0 0 0;
+
+        &:before,
+        &:after {
+            content: "";
+            position: absolute;
+            top: 3px;
+            height: calc(24px*0.72);
+            width: calc(24px*0.72);
+            flex: 0 0 calc(24px*0.72);
+            margin: 0 0 0 1px;
+            transform: translate(-50%, 0) rotate(-45deg);
+            border: #BB9C66 solid 1px;
+
+        }
+
+        &:before {
+            left: 33.333%;
+            @media (max-width: 975px) {
+                left: 50%;
+            }
+
+        }
+
+        &:after {
+            left: 66.667%;
+            @media (max-width: 975px) {
+                display: none;
+            }
 
 
-@import '../../node_modules/swiper/swiper';
-@import '../../node_modules/swiper/modules/navigation/navigation';
-@import '../../node_modules/swiper/modules/pagination/pagination';
-@import '../../node_modules/swiper/modules/scrollbar/scrollbar';
+            
+        }
+    }
 
-/*iugh*/
+    &__column {
+        padding: 0 50px 25px;
+        flex: 0 1 33.333%;
+        margin: 0 0 25px 0;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        &:before {
+            content: "";
+            background-color: #BB9C66;
+            width: 10px;
+            height: 10px;
+            flex: 0 0 10px;
+            border-radius: 50%;
+            position: absolute;
+            left: 50%;
+            bottom: -5px;
+            transform: translate(-50%, 0);
+        }
+        @media (max-width: 975px) {
+            flex: 0 1 50%;
+        }
+        @media (max-width: 650px) {
+            flex: 1 1 100%;
+        }
+    }
+
+    &__item {}
+
+    &__decor {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 24px;
+        height: calc(100% + 9px);
+        align-items: center;
+        transform: translate(50%, 0);
+        display: flex;
+        flex-direction: column;
+        z-index: 5;
+
+        &:before {
+            content: "";
+            background-color: #BB9C66;
+            width: 1px;
+            flex: 1 1 auto;
+        }
+
+        &:after {
+            content: "";
+            height: calc(24px*0.72);
+            width: calc(24px*0.72);
+            flex: 0 0 calc(24px*0.72);
+            transform: rotate(-45deg);
+            border: #BB9C66 solid 1px;
+            margin: 15px 0 0 0;
+        }
+
+        span {
+            flex: 1 1 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            &:before {
+                content: "";
+                background-color: #BB9C66;
+                width: 10px;
+                height: 10px;
+                flex: 0 0 10px;
+                border-radius: 50%;
+                margin: 20px 0;
+            }
+
+            &:after {
+                content: "";
+                background-color: #BB9C66;
+                width: 1px;
+                flex: 1 1 auto;
+            }
+
+        }
+    }
+
+}
+
+// << ======================= ОСНОВНОЙ БЛОК ===

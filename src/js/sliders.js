@@ -33,7 +33,7 @@ if (sliders) {
 
 function sliders_bild_callback(params) { }
 
- Swiper.use([Navigation, Pagination]);
+Swiper.use([Navigation, Pagination]);
 
 let main_slider = new Swiper('.main-slider__body', {
     observer: true,
@@ -48,6 +48,46 @@ let main_slider = new Swiper('.main-slider__body', {
         nextEl: '.control-main-slider__arrow_prev',
         prevEl: '.control-main-slider__arrow_next'
 
+    },
+    breakpoints: {
+        320: {
+            autoHeight: true,
+        },
+        768: {
+            autoHeight: false,
+        }
+    },
+    on: {
+        lazyImageReady: function () {
+            ibg();
+        },
+    }
+});
+
+let lot_slider = new Swiper('.slider-lots__body', {
+    observer: true,
+    observeParents: true,
+    slidesPerView: 3,
+    spaceBetween: 0,
+    // autoHeight: true,
+    speed: 800,
+    loop: true,
+
+    navigation: {
+        nextEl: '.control-slider-lots__arrow_prev',
+        prevEl: '.control-slider-lots__arrow_next'
+
+    },
+    breakpoints: {
+        320: {
+            slidesPerView: 1,
+        },
+        550: {
+            slidesPerView: 2,
+        },
+        768: {
+            slidesPerView: 3,
+        }
     },
     on: {
         lazyImageReady: function () {

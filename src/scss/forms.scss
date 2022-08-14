@@ -2,6 +2,8 @@
 .btn {
     position: relative;
     display: inline-block;
+    // white-space: nowrap;
+    
     &:before,
     &:after {
         position: absolute;
@@ -17,8 +19,9 @@
     }
 
     &:after {
-        bottom: 0;
+        bottom: 0px;
         background-color: #8d652e;
+        // border: 4mm ridge rgba(211, 220, 50, .6);
     }
 
     &__body {
@@ -52,7 +55,7 @@
             font-family: 'pfdintextcondpro';
             letter-spacing: 2px;
             text-transform: uppercase;
-            display: inline-flex;
+            display: flex;
             justify-content: center;
             align-items: center;
             padding: 0 50px;
@@ -69,6 +72,15 @@
                 position: absolute;
                 width: 100%;
             }
+        }
+    }
+    &_big{
+        .btn__body span {
+            font-size: 21px;
+            color: #000;
+            letter-spacing: 2px;
+            font-weight: 500;
+            padding: 0 20px;
         }
     }
 
