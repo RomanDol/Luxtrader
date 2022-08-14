@@ -1215,6 +1215,9 @@ body._lock {
   margin: 0 20px;
 }
 
+.categories__items {
+  margin: 0 0 85px 0;
+}
 .categories__container {
   overflow: hidden;
   position: relative;
@@ -1338,4 +1341,19 @@ body._lock {
   background-color: #BB9C66;
   width: 1px;
   flex: 1 1 auto;
+}
+.text-categories {
+  color: #333333;
+  font-size: 15px;
+  line-height: 1.6666666667;
+}
+.text-categories p {
+  margin: 0 0 25px 0;
+}
+.text-categories p:last-child {
+  margin: 0;
+}
+.text-categories__body {
+  padding: 0 0 0 130px;
+  background: url("../img/categories/decor.png") left top repeat-y;
 }

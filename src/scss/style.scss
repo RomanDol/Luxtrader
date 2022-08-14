@@ -333,11 +333,15 @@ body {
 
 // ===========================================================================
 .categories {
+    &__items {
+        margin: 0 0 85px 0;
+    }
 
     &__container {
         overflow: hidden;
         position: relative;
-        &:after{
+
+        &:after {
             content: "";
             position: absolute;
             bottom: 0;
@@ -349,7 +353,6 @@ body {
 
     &__row {
         display: flex;
-        // justify-content: center;
         position: relative;
         flex-wrap: wrap;
         margin: 0 -50px;
@@ -371,6 +374,7 @@ body {
 
         &:before {
             left: 33.333%;
+
             @media (max-width: 975px) {
                 left: 50%;
             }
@@ -379,12 +383,13 @@ body {
 
         &:after {
             left: 66.667%;
+
             @media (max-width: 975px) {
                 display: none;
             }
 
 
-            
+
         }
     }
 
@@ -395,6 +400,7 @@ body {
         position: relative;
         display: flex;
         justify-content: center;
+
         &:before {
             content: "";
             background-color: #BB9C66;
@@ -407,9 +413,11 @@ body {
             bottom: -5px;
             transform: translate(-50%, 0);
         }
+
         @media (max-width: 975px) {
             flex: 0 1 50%;
         }
+
         @media (max-width: 650px) {
             flex: 1 1 100%;
         }
@@ -472,6 +480,36 @@ body {
         }
     }
 
+
+
+    &__text {}
+
+
 }
+
+
+
+.text-categories {
+
+
+    color: #333333;
+    font-size: 15px;
+    line-height: calc(25 / 15);
+
+    p {
+        margin: 0 0 25px 0;
+
+        &:last-child {
+            margin: 0;
+        }
+    }
+
+    &__body {
+        padding: 0 0 0 130px;
+        background: url('@img/categories/decor.png') left top repeat-y;
+    }
+}
+
+
 
 // << ======================= ОСНОВНОЙ БЛОК ===
