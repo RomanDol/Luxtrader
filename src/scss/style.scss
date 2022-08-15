@@ -333,6 +333,8 @@ body {
 
 // ===========================================================================
 .categories {
+    margin: 0 0 70px 0;
+
     &__items {
         margin: 0 0 85px 0;
     }
@@ -505,10 +507,51 @@ body {
     }
 
     &__body {
-        padding: 0 0 0 130px;
+        padding: 10px 0 25px 130px;
         background: url('@img/categories/decor.png') left top repeat-y;
     }
 }
+
+// ===============================================================================
+.services {
+    padding: 60px 0 40px 0;
+    background-color: #1c242a;
+
+    @media (max-width: 640px) {
+        padding: 40px 0 0 0;
+    }
+
+    &__container {}
+
+    &__header {
+        margin: 0 0 40px 0;
+    }
+
+    &__item {}
+
+    &__row {
+        margin: 0 -48px;
+        justify-content: center;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__column {
+        flex: 0 1 33.333%;
+        padding: 0 48px;
+        margin: 0 0 50px 0;
+
+        @media (max-width: 975px) {
+            flex: 0 1 50%;
+        }
+
+        @media (max-width: 640px) {
+            flex: 1 1 100%;
+        }
+
+    }
+}
+
 
 
 

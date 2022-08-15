@@ -545,6 +545,64 @@ body._lock {
   background-color: rgba(0, 0, 0, 0.7);
 }
 
+.service {
+  height: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+.service__image {
+  height: 205px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0 10px 0;
+}
+.service__title {
+  flex: 1 1 auto;
+  font-family: "pfdintextcondpro";
+  font-size: 21px;
+  font-weight: 500;
+  line-height: 1.1904761905;
+  text-transform: uppercase;
+  color: #fff;
+  letter-spacing: 2.1px;
+}
+.service__text {
+  color: #bb9c66;
+  font-size: 15px;
+  line-height: 1.6666666667;
+  max-height: 50px;
+  overflow: hidden;
+  margin: 23px 0 0 0;
+}
+.service__btn {
+  position: relative;
+  font-family: "pfdintextcondpro";
+  font-size: 21px;
+  font-weight: 500;
+  color: #fff;
+  letter-spacing: 2.1;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 30px 0 0 0;
+}
+.service__btn:before {
+  content: "";
+  position: absolute;
+  background-color: #bb9c66;
+  height: 1px;
+  width: 100%;
+  top: 50%;
+  left: 0;
+}
+.service__btn span {
+  background-color: #1c242a;
+  position: relative;
+  z-index: 2;
+  padding: 0 15px;
+}
+
 ._ibg {
   background-position: center;
   background-size: cover;
@@ -1215,6 +1273,9 @@ body._lock {
   margin: 0 20px;
 }
 
+.categories {
+  margin: 0 0 70px 0;
+}
 .categories__items {
   margin: 0 0 85px 0;
 }
@@ -1354,6 +1415,40 @@ body._lock {
   margin: 0;
 }
 .text-categories__body {
-  padding: 0 0 0 130px;
+  padding: 10px 0 25px 130px;
   background: url("../img/categories/decor.png") left top repeat-y;
+}
+
+.services {
+  padding: 60px 0 40px 0;
+  background-color: #1c242a;
+}
+@media (max-width: 640px) {
+  .services {
+    padding: 40px 0 0 0;
+  }
+}
+.services__header {
+  margin: 0 0 40px 0;
+}
+.services__row {
+  margin: 0 -48px;
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+.services__column {
+  flex: 0 1 33.333%;
+  padding: 0 48px;
+  margin: 0 0 50px 0;
+}
+@media (max-width: 975px) {
+  .services__column {
+    flex: 0 1 50%;
+  }
+}
+@media (max-width: 640px) {
+  .services__column {
+    flex: 1 1 100%;
+  }
 }
