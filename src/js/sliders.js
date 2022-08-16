@@ -1,6 +1,6 @@
 // Слайдер
 
-import Swiper, { Navigation, Pagination } from 'swiper';
+import Swiper, { Navigation, Pagination, EffectFade } from 'swiper';
 
 
 
@@ -89,6 +89,32 @@ let lot_slider = new Swiper('.slider-lots__body', {
             slidesPerView: 3,
         }
     },
+    on: {
+        lazyImageReady: function () {
+            ibg();
+        },
+    }
+});
+
+let quotes_slider = new Swiper('.slider-quotes__body', {
+    modules: [Navigation, Pagination, EffectFade],
+    effect: 'fade',
+    // fadeEffect: {
+    //     crossFade: true
+    // },
+    observer: true,
+    observeParents: true,
+    slidesPerView: 1,
+    spaceBetween: 0,
+    // autoHeight: true,
+    speed: 1000,
+    loop: true,
+
+    navigation: {
+        nextEl: '.control-slider-quotes__circle',
+
+    },
+  
     on: {
         lazyImageReady: function () {
             ibg();

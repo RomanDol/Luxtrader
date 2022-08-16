@@ -100,6 +100,7 @@ body {
 @import '../../node_modules/swiper/modules/navigation/navigation';
 // @import '../../node_modules/swiper/modules/pagination/pagination';
 // @import '../../node_modules/swiper/modules/scrollbar/scrollbar';
+@import '../../node_modules/swiper/modules/effect-fade/effect-fade';
 // << === ПОДКЛЮЧЕНИЕ SWIPER ===============
 
 
@@ -551,6 +552,136 @@ body {
 
     }
 }
+
+// ================================================================================
+.quotes {
+    padding: 64px 0 75px 0;
+
+    &__container {
+        overflow: hidden;
+    }
+
+    &__slider {}
+}
+
+
+.slider-quotes {
+
+    &__body {}
+
+    &__slide {
+        display: flex;
+        align-items: center;
+        opacity: 0 !important;
+        &.swiper-slide-active{
+            opacity: 1 !important;
+        }
+    }
+
+    &__image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 20px;
+        flex: 0 0 calc(320px / 950px * 100%);
+
+        img {
+            max-width: 100%;
+        }
+    }
+
+    &__content {
+        flex: 1 1 auto;
+        flex: 0 1 515px;
+    }
+
+    &__title {
+        font-size: 25px;
+        line-height: calc(30 / 25);
+        font-style: italic;
+        margin: 0px 0px calc(30px / 25px * 1em) 0px;
+
+
+    }
+
+    &__info {
+        color: #1c242a;
+        font-size: 15px;
+
+        p {
+            margin: 0px 0px 7px 0px;
+
+            &:last-child {
+                margin: 0px 0px 0px 0px;
+
+            }
+        }
+    }
+
+    &__control {}
+}
+
+
+.control-slider-quotes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 400px;
+    margin: 0 auto;
+
+    &__decor {
+        flex: 0 1 33.333%;
+        display: flex;
+        align-items: center;
+
+        &:before {
+            content: '';
+            flex: 1 1 auto;
+            height: 1px;
+            background-color: #bb9c66;
+
+        }
+
+        &:after {
+            content: '';
+            margin: 0px 0px 0px 5px;
+            
+            width: 10px;
+            border-radius: 50%;
+            height: 10px;
+            border: 1px solid #bb9c66;
+
+
+        }
+        &:last-child{
+            flex-direction: row-reverse;
+            &:after{
+                margin: 0px 5px 0px 0px;
+                
+            }
+            
+        }
+
+
+    }
+
+    &__link {
+        text-align: center;
+        flex: 0 1 33.333%;
+    }
+    &__circle{
+        display: inline-flex;
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+        border-radius: 50%;
+        border: 1px solid #bb9c66;
+        background: url('@img/quotes/rotate-arrow.png') center no-repeat;
+        
+        
+    }
+}
+
 
 
 
