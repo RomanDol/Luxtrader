@@ -114,6 +114,14 @@ let quotes_slider = new Swiper('.slider-quotes__body', {
         nextEl: '.control-slider-quotes__circle',
 
     },
+    breakpoints: {
+        320: {
+            autoHeight: true,
+        },
+        570: {
+            autoHeight: false,
+        }
+    },
   
     on: {
         lazyImageReady: function () {

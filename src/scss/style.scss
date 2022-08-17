@@ -125,6 +125,7 @@ body {
     &__item {
         // height: 484px;
         align-items: stretch;
+
     }
 
     &__control {
@@ -338,6 +339,11 @@ body {
 
     &__items {
         margin: 0 0 85px 0;
+
+        @media (max-width: 767px) {
+            margin: 0px 0px 0px 0px;
+
+        }
     }
 
     &__container {
@@ -510,9 +516,20 @@ body {
     &__body {
         padding: 10px 0 25px 130px;
         background: url('@img/categories/decor.png') left top repeat-y;
+
+        @media (max-width: 767px) {
+            padding: 10px 0px 25px 0px;
+            background: none;
+        }
     }
 }
 
+// .webp.text-categories__body{
+//     @media (max-width: 767px) {
+//             padding: 10px 0px 25px 0px;
+//             background: none !important;
+//         }
+// }
 // ===============================================================================
 .services {
     padding: 60px 0 40px 0;
@@ -557,24 +574,42 @@ body {
 .quotes {
     padding: 64px 0 75px 0;
 
+    @media (max-width: 767px) {
+        padding: 35px 0px 35px 0px;
+
+    }
+
     &__container {
         overflow: hidden;
     }
 
-    &__slider {}
+    &__slider {
+        .swiper-wrapper {}
+    }
 }
 
 
 .slider-quotes {
 
-    &__body {}
+
+    &__body {
+        @media (max-width: 570px) {
+            margin: 0px 0px 30px 0px;
+
+        }
+    }
 
     &__slide {
         display: flex;
         align-items: center;
         opacity: 0 !important;
-        &.swiper-slide-active{
+
+        &.swiper-slide-active {
             opacity: 1 !important;
+        }
+
+        @media (max-width: 570px) {
+            display: block;
         }
     }
 
@@ -588,6 +623,7 @@ body {
         img {
             max-width: 100%;
         }
+
     }
 
     &__content {
@@ -645,7 +681,7 @@ body {
         &:after {
             content: '';
             margin: 0px 0px 0px 5px;
-            
+
             width: 10px;
             border-radius: 50%;
             height: 10px;
@@ -653,13 +689,15 @@ body {
 
 
         }
-        &:last-child{
+
+        &:last-child {
             flex-direction: row-reverse;
-            &:after{
+
+            &:after {
                 margin: 0px 5px 0px 0px;
-                
+
             }
-            
+
         }
 
 
@@ -669,7 +707,8 @@ body {
         text-align: center;
         flex: 0 1 33.333%;
     }
-    &__circle{
+
+    &__circle {
         display: inline-flex;
         width: 50px;
         height: 50px;
@@ -677,11 +716,194 @@ body {
         border-radius: 50%;
         border: 1px solid #bb9c66;
         background: url('@img/quotes/rotate-arrow.png') center no-repeat;
-        
-        
+
+
     }
 }
 
+// ================================================================================
+
+.info {
+    padding: 0px 0px 75px 0px;
+
+    @media (max-width: 767px) {
+        padding: 0px 0px 35px 0px;
+        
+
+    }
+
+    &__container {}
+
+    &__row {
+        display: flex;
+        margin: 0 -22px;
+        flex-wrap: wrap;
+
+        @media (max-width: 767px) {
+            display: block;
+        }
+    }
+
+    &__column {
+        flex: 0 1 50%;
+        padding: 0 22px;
+        margin: 0px 0px 55px 0px;
+
+        &:last-child {
+            margin: 0;
+            flex: 1 1 100%;
+
+        }
+
+        @media (max-width: 767px) {
+            margin: 0px 0px 30px 0px;
+
+        }
+    }
+
+    &__block {}
+
+    &__title {}
+
+    &__content {}
+
+    &__item {
+        margin: 0px 0px 30px 0px;
+
+        @media (max-width: 767px) {
+            margin: 0px 0px 20px 0px;
+
+        }
+
+    }
+
+    &__date {
+        color: #bb9c66;
+        font-size: 12px;
+        margin: 0px 0px 5px 0px;
+
+    }
+
+    &__label {
+        font-size: 15px;
+        color: #333333;
+        font-weight: 700;
+        text-decoration: underline;
+        display: inline-block;
+        margin: 0px 0px 5px 0px;
+
+    }
+
+    &__text {
+        font-size: 15px;
+        line-height: calc(21 / 15);
+    }
+
+    &__subscribe {}
+}
+
+.title-info {
+    display: flex;
+    align-items: center;
+    font-size: 35px;
+    font-family: 'pfdintextcondpro';
+    font-weight: 500;
+    letter-spacing: 3.5px;
+    text-transform: uppercase;
+    margin: 0px 0px 30px 0px;
+
+    @media (max-width: 767px) {
+        margin: 0px 0px 15px 0px;
+
+    }
+
+
+    span {
+        &:first-child {
+            margin: 0px 15px 0px 0px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+    }
+}
+
+.subscribe {
+
+    &__title {}
+
+    &__body {
+        display: flex;
+        margin: 0 -22px;
+
+        @media (max-width: 767px) {
+            display: block;
+
+        }
+    }
+
+    &__column {
+        flex: 0 1 50%;
+        padding: 0 22px;
+    }
+
+    &__text {
+        font-size: 15px;
+        line-height: calc(21 / 15);
+
+        @media (max-width: 767px) {
+            margin: 0px 0px 25px 0px;
+
+        }
+    }
+
+    &__form {}
+}
+
+.form-subscribe {
+
+    height: 50px;
+    border: 3px solid #bb9c66;
+    background-color: #fff;
+    display: flex;
+
+    &__input {
+        flex: 1 1 auto;
+    }
+
+    &__btn {
+        position: relative;
+        flex: 0 0 95px;
+        background-color: #fff;
+
+        &:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translate(0px, -50%);
+            width: 1px;
+            height: 32px;
+            background-color: #bb9c66;
+        }
+
+        span {
+            background: url('@img/icons/ok-btn.png') right no-repeat;
+            padding: 0px 32px 0px 0px;
+
+            color: #1c242a;
+            font-family: 'pfdintextcondpro';
+            font-size: 21px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 2.12px;
+
+        }
+
+    }
+}
 
 
 

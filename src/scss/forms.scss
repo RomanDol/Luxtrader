@@ -1,9 +1,20 @@
+// ============== FORM ======================= >>
+.form {
+    &__error {
+        color: red;
+        margin: 10px 0px 0px 0px;
+
+    }
+}
+
+// << ============== FORM =======================
+
 // Кнопки тег btn =============
 .btn {
     position: relative;
     display: inline-block;
     // white-space: nowrap;
-    
+
     &:before,
     &:after {
         position: absolute;
@@ -26,8 +37,8 @@
 
     &__body {
 
-    
-   
+
+
 
 
         &:before,
@@ -74,7 +85,8 @@
             }
         }
     }
-    &_big{
+
+    &_big {
         .btn__body span {
             font-size: 21px;
             color: #000;
@@ -86,8 +98,8 @@
 
     @media (min-width: 992px) {
         &:hover {
-            .btn__body span{
-                &:after{
+            .btn__body span {
+                &:after {
                     opacity: 0.3;
                     height: 100%;
                     // border: solid green;
@@ -103,3 +115,37 @@
 
 
 // ============================
+
+
+// ============== INPUT ======================= >>
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.input {
+    border-radius: 0 !important;
+    width: 100%;
+    color: #4f4f4f;
+    font-size: 15px;
+    height: 100%;
+    display: block;
+    padding: 0 25px;
+
+    &_focus {
+        color: #000;
+    }
+
+}
+
+textarea.input {
+    resize: none;
+    padding: 0 20px;
+}
+
+// << ============== INPUT =======================
