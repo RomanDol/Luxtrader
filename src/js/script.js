@@ -5,7 +5,7 @@ user_icon.addEventListener("click", function (e) {
 });
 
 
-// Menu
+// ================== Menu ========================== >>
 let iconMenu = document.querySelector(".icon-menu");
 
 if (iconMenu != null) {
@@ -26,12 +26,6 @@ if (iconMenu != null) {
         }
     });
 }
-// function menu_close() {
-//     let iconMenu = document.querySelector(".icon-menu");
-//     let body = document.querySelector(".menu__body");
-//     iconMenu.classList.remove("_active");
-//     body.classList.remove("_active");
-// }
 
 // ==========
 
@@ -42,28 +36,50 @@ document.documentElement.addEventListener("click", function (e) {
     }
 });
 
-//  Перенос блока region в бургер ===========================
+// << ===========================================================
 
-start();
-window.addEventListener('resize', start);
+//  ======== Перенос блока в другое место ======================== >>
 
-function start() {
-    if (document.documentElement.clientWidth < 767.98) {
-        let menuList = document.querySelector('.menu__list');
-        let region = document.querySelector('.actions-header__region');
-        menuList.after(region);
-    } else {
-        let headerActions = document.querySelector('.actions-header__user');
-        let region = document.querySelector('.actions-header__region');
-        headerActions.before(region);
-    }
-}
+// start();
+// window.addEventListener('resize', start);
 
-// =========================================================
+// function start() {
+//     if (document.documentElement.clientWidth < 767.98) {
+
+//         //  ===== Перенос блока region в бургер ============== >>
+//         let menuList = document.querySelector('.menu__list');
+//         let region = document.querySelector('.actions-header__region');
+//         menuList.after(region);
+//         //  << ===== Перенос блока region в бургер ==============
+
+//         //  ===== Перенос блока footer__info в footer__contact ============== >>
+//         let footerColumn = document.querySelector('.footer__contact');
+//         let footerInfo = document.querySelector('.footer__info');
+//         footerColumn.after(footerInfo);
+//         //  << ===== Перенос блока footer__info в footer__contact ==============
+
+//     } else {
+
+//         //  ===== Перенос блока region в header ============== >>
+//         let headerActions = document.querySelector('.actions-header__user');
+//         let region = document.querySelector('.actions-header__region');
+//         headerActions.before(region);
+//         //  << ===== Перенос блока region в header ==============
+
+//         //  ===== Перенос блока footer__info в footer__logo ============== >>
+//         let footerLogo = document.querySelector('.footer__logo');
+//         let footerInfo = document.querySelector('.footer__info');
+//         footerLogo.after(footerInfo);
+//         //  << ===== Перенос блока footer__info в footer__logo ==============
+
+//     }
+// }
+
+//  << ======== Перенос блока в другое место ========================
 
 
 
-//  Подмена картинки из HTML b CSS =========================
+//  ======= Подмена картинки background из HTML в CSS ============ >>
 function ibg() {
 
     let ibg = document.querySelectorAll("._ibg");
@@ -76,4 +92,33 @@ function ibg() {
 
 ibg();
 
-// ===========================================================
+//  << ======= Подмена картинки background из HTML в CSS ============ 
+
+// =========================== smoothScroll ========================== >>
+
+let link = document.querySelectorAll('._goto-block');
+if (link) {
+    let blocks = [];
+    for (let index = 0; index < link.length; index++) {
+        let el = link[index];
+        let block_name = el.getAttribute('href').replace('#', '');
+        if (block_name != '' && !~blocks.indexOf(block_name)) {
+            blocks.push(block_name);
+        }
+
+
+        el.addEventListener('click', function (e) {
+            let target_block_class = el.getAttribute('href').replace('#', '');
+            let target_block = document.querySelector('.' + target_block_class);
+
+
+            window.scroll({
+                left: 0,
+                top: target_block.offsetTop - 75,
+                behavior: 'smooth'
+            })
+        })
+    }
+}
+
+// << =========================== smoothScroll ==========================

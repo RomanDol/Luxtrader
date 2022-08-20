@@ -1,6 +1,9 @@
 .header {
     background-color: #1c242a;
-    position: relative;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
     z-index: 50;
 
     &__container {
@@ -40,7 +43,7 @@
 
 .menu {
 
-
+    user-select: none;
     padding: 0 0 0 calc(30px/950px * 100%);
     flex: 1 1 auto;
     // border: #fff solid;
@@ -253,7 +256,7 @@
         background-color: #1c242a;
         padding: 20px;
         min-width: 176px;
-    
+
 
         // border: green solid 10px;
         li {
